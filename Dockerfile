@@ -1,7 +1,7 @@
-FROM heap-base:2.0
+FROM docker-registry.turbulent.ca:5000/heap-base:2.0.3
 MAINTAINER Benoit Beausejour <b@turbulent.ca>
 
-ENV heap-redis 2.0
+ENV heap-redis 2.0.1
 
 # Install packages
 ENV DEBIAN_FRONTEND noninteractive
