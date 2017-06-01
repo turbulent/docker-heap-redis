@@ -7,7 +7,7 @@ ENV heap-redis 3.0.0
 ENV DEBIAN_FRONTEND noninteractive
 RUN add-apt-repository ppa:chris-lea/redis-server
 RUN apt-get update && \
-  apt-get -y install redis-server && \
+  apt-get -y install redis-server=3:3.2.9-2chl1~xenial1 && \
   rm -rf /var/lib/apt/lists/*
 
 ADD redis.conf.tmpl /systpl/
@@ -24,5 +24,4 @@ RUN mkdir -p /vol/logs && chown heap:root /vol/logs
 RUN mkdir -p /vol/database && chown heap:root /vol/database
 VOLUME  ["/vol/logs", "/vol/database"]
 
-EXPOSE 80
 CMD ["/run-redis.sh"]
