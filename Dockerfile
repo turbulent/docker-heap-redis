@@ -1,10 +1,11 @@
-FROM docker-registry.turbulent.ca:5000/heap-base:2.0.3
+FROM docker-registry.turbulent.ca:5000/heap-base:3.0.0
 MAINTAINER Benoit Beausejour <b@turbulent.ca>
 
-ENV heap-redis 2.0.1
+ENV heap-redis 3.0.0
 
 # Install packages
 ENV DEBIAN_FRONTEND noninteractive
+RUN add-apt-repository ppa:chris-lea/redis-server
 RUN apt-get update && \
   apt-get -y install redis-server && \
   rm -rf /var/lib/apt/lists/*
