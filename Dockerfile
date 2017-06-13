@@ -1,4 +1,4 @@
-FROM docker-registry.turbulent.ca:5000/heap-base:3.0.0
+FROM turbulent/heap-base:3.0.0
 MAINTAINER Benoit Beausejour <b@turbulent.ca>
 
 ENV heap-redis 3.0.0
