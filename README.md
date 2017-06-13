@@ -1,6 +1,6 @@
-# heap-redis docker image.
+# heap-redis Docker image
 
-Dockerized redis daemon.
+Docker image for Redis service in Heap-based hosting environments.
 
 ## Usage
 
@@ -24,3 +24,9 @@ VAR_REDIS_DATABASES="16"
 VAR_REDIS_DBFILENAME="dump.rdb"
 VAR_REDIS_SAVE="save 900 1|save 300 10|save 60 10000"
 ```
+
+## License
+
+All work found under this repository is licensed under the [Apache
+License 2.0](LICENSE).
+
